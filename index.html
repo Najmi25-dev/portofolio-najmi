@@ -1133,6 +1133,43 @@
     </section>
 
     <!-- Section Project Design UI/UX Start -->
+     <div
+      id="designProcessModal"
+      class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center z-50 px-4"
+    >
+      <div
+        class="bg-white dark:bg-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-xl relative"
+      >
+        <button
+          onclick="closeDesignProcess()"
+          class="absolute top-2 left-1 w-10 h-10 flex items-center justify-center rounded-full bg-slate-200/70 dark:bg-slate-700/70 dark:hover:bg-slate-500 text-slate-700 dark:text-white text-2xl hover:bg-red-500 hover:text-white transition-all duration-200 shadow-md"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+
+        <div
+          class="space-y-4 text-sm text-justify text-slate-600 dark:text-slate-200 p-6 max-h-[70vh] overflow-y-auto"
+        >
+          <h4 id="modalTitle" class="text-lg font-semibold text-primary"></h4>
+
+          <div>
+            <span class="font-semibold text-cyan-600">Problem</span>
+            <p id="modalProblem"></p>
+          </div>
+
+          <div>
+            <span class="font-semibold text-cyan-600">Solution</span>
+            <p id="modalSolution"></p>
+          </div>
+
+          <div>
+            <span class="font-semibold text-cyan-600">Result</span>
+            <p id="modalResult"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section
       id="project-design"
@@ -1183,21 +1220,30 @@
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <h3 class="text-xl font-semibold text-dark dark:text-primary">
-                Design Website Gym
-              </h3>
               <a
                 href="https://www.figma.com/design/ivRXrc9ba7AiBV7lpOIwWZ/FItCamp?node-id=9-2&t=xM9HktBjQoi5kplH-1"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-red-500 hover:text-red-700 animate-bounce"
+              >
+                <h3
+                  class="text-xl font-semibold text-dark hover:underline dark:text-primary dark:hover:text-blue-300"
+                >
+                  Design Website Gym
+                </h3></a
+              >
+
+              <a
+                href="https://www.figma.com/design/ivRXrc9ba7AiBV7lpOIwWZ/FItCamp?node-id=9-2&t=xM9HktBjQoi5kplH-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-red-500 hover:text-red-700"
               >
                 <!-- isi dari icons8-external-link.svg -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="w-[1.25rem] h-[1.25rem]"
+                  class="w-[1.25rem] h-[1.25rem] animate-bounce"
                 >
                   <path
                     d="M14 3h7v7h-2V6.41l-9.29 
@@ -1219,6 +1265,17 @@
               halaman Home, Category Search, Detail Category, Subscribe Page,
               Check Out Page, Payment Page , View Subscription Page, Transaction
               ticket Page untuk sebuah website membership GYM
+              <button
+                onclick="openDesignProcess(
+    'Design Process – FitCamp Website',
+    'Calon pengguna mengalami kesulitan dalam menemukan lokasi gym yang sesuai, memahami perbedaan tipe subscription membership, serta menyelesaikan proses pendaftaran karena alur yang tidak terstruktur dan informasi yang kurang jelas.',
+    'Untuk menjawab permasalahan tersebut, saya merancang alur pengguna yang sistematis dari Home → Category Search → Detail → Subscribe → Checkout → Payment → Subscription → Transaction. Fitur Category Search memungkinkan pengguna menemukan gym berdasarkan area yang diinginkan, sementara sistem subscription dengan tiga pilihan membership yaitu Regular Package, Super Package, dan Mega Package dengan menampilkan benefit secara ringkas dan terstruktur sehingga pengguna dapat membandingkan paket dan mengambil keputusan sesuai kebutuhan.',
+    'Pendekatan desain ini menghasilkan pengalaman pengguna yang lebih terarah, mempermudah pencarian gym, mempercepat proses pendaftaran membership, meningkatkan kepercayaan pengguna, serta berpotensi meningkatkan konversi subscription.'
+  )"
+                class="text-dark dark:text-cyan-500 hover:underline font-semibold ml-1"
+              >
+                Lihat Proses Desain
+              </button>
             </p>
           </div>
 
@@ -1241,9 +1298,17 @@
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <h3 class="text-xl font-semibold text-dark dark:text-primary">
-                Design Mobile TravelBook
-              </h3>
+              <a
+                href="https://www.figma.com/design/qz8hA2qRITR49d6IA0HHG9/Booking-Travel?node-id=24-511&t=xM9HktBjQoi5kplH-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h3
+                  class="text-xl font-semibold text-dark hover:underline dark:text-primary dark:hover:text-blue-300"
+                >
+                  Design Mobile TravelBook
+                </h3></a
+              >
               <a
                 href="https://www.figma.com/design/qz8hA2qRITR49d6IA0HHG9/Booking-Travel?node-id=24-511&t=xM9HktBjQoi5kplH-1"
                 target="_blank"
@@ -1276,6 +1341,17 @@
               halaman Sign in, Sign Up, Home, Category, Detail, Booking Details,
               Payment, CheckOut, Succes, Schedule, Trip Details untuk sebuah
               aplikasi travel Booking
+              <button
+                onclick="openDesignProcess(
+    'Design Process – TravelBook App',
+    'Calon pengguna, baik solo traveler maupun keluarga, mengalami kesulitan dalam menentukan destinasi, akomodasi, dan aktivitas perjalanan dalam satu paket. Proses booking yang kompleks, keterbatasan informasi keamanan, serta kurangnya panduan selama perjalanan membuat pengalaman perencanaan trip terasa rumit dan tidak efisien.',
+    'Untuk menjawab permasalahan tersebut, saya merancang platform travel booking yang menyatukan itinerary, akomodasi, dan aktivitas perjalanan dalam satu paket terpadu. Desain dilengkapi dengan fitur travel guide di setiap destinasi, sistem booking yang sederhana, metode pembayaran melalui bank terpercaya, serta fitur review dan rating sebagai validasi keamanan. Selain itu, tersedia fitur rekomendasi destinasi dan komunikasi langsung dengan travel agent agar pengguna dapat menyesuaikan jadwal perjalanan dengan lebih fleksibel.',
+    'Pendekatan desain ini menghasilkan pengalaman perencanaan perjalanan yang lebih praktis, aman, dan efisien. Pengguna dapat memilih paket perjalanan sesuai kebutuhan dengan lebih percaya diri, menyelesaikan proses booking lebih cepat, serta merasa lebih nyaman selama perjalanan, sehingga meningkatkan kepuasan dan potensi konversi pemesanan.'
+  )"
+                class="text-dark dark:text-cyan-500 hover:underline font-semibold ml-1"
+              >
+                Lihat Proses Desain
+              </button>
             </p>
           </div>
 
@@ -1299,9 +1375,16 @@
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <h3 class="text-xl font-semibold text-dark dark:text-primary">
-                Design Website NFT
-              </h3>
+              <a
+                href="https://www.figma.com/design/M6SsomcB5WCWyDpp0PDwSY/Untitled?node-id=0-1&t=cKbramm30rh2Edol-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h3
+                  class="text-xl font-semibold text-dark hover:underline dark:text-primary dark:hover:text-blue-300"
+                >
+                  Design Website NFT
+                </h3></a>
               <a
                 href="https://www.figma.com/design/M6SsomcB5WCWyDpp0PDwSY/Untitled?node-id=0-1&t=cKbramm30rh2Edol-1"
                 target="_blank"
@@ -1331,72 +1414,28 @@
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              Pada design ini saya berfokus untuk menciptakan design antarmuka
-              halaman beranda, explore, stats, help dan login untuk sebuah
-              website NFT
+              Saya merancang antarmuka website NFT yang mencakup halaman
+              Beranda, Explore, Stats, Help dengan pendekatan desain yang
+              berorientasi pada pengguna, untuk meningkatkan kemudahan navigasi,
+              pemahaman informasi aset digital, dan kenyamanan dalam proses
+              eksplorasi dan transaksi
+              <button
+                onclick="openDesignProcess(
+    'Design Process – Website NFT ',
+    'Calon pengguna, terutama pemula di dunia NFT, mengalami kesulitan dalam memahami cara kerja marketplace NFT, menavigasi koleksi aset digital, serta membedakan informasi penting seperti harga, rarity, dan statistik performa aset. Antarmuka yang terlalu teknis dan minim panduan menyebabkan proses eksplorasi dan transaksi terasa rumit serta menurunkan kepercayaan pengguna.',
+    'Untuk mengatasi permasalahan tersebut, saya merancang antarmuka marketplace NFT yang berfokus pada kesederhanaan dan edukasi visual pengguna. Struktur navigasi dibuat lebih jelas melalui halaman Beranda, Explore, Stats, dan Help, sehingga pengguna dapat menemukan koleksi, menganalisis performa NFT, serta memahami konsep dasar NFT dengan lebih mudah. Informasi penting seperti harga, volume transaksi, dan rarity ditampilkan secara terstruktur, dilengkapi dengan hierarki visual yang kuat agar pengguna dapat mengambil keputusan secara lebih cepat dan percaya diri.',
+    'Pendekatan desain ini menghasilkan pengalaman eksplorasi NFT yang lebih intuitif dan ramah bagi pengguna baru maupun berpengalaman. Pengguna dapat menemukan aset digital dengan lebih cepat, memahami nilai dan performa NFT secara lebih akurat, serta melakukan transaksi dengan tingkat kepercayaan yang lebih tinggi, sehingga berpotensi meningkatkan engagement dan konversi transaksi pada platform.'
+  )"
+                class="text-dark dark:text-cyan-500 hover:underline font-semibold ml-1"
+              >
+                Lihat Proses Desain
+              </button>
             </p>
           </div>
 
           <div
             class="mb-12 p-4 md:w-1/2"
             data-aos="flip-left"
-            data-aos-duration="1000"
-          >
-            <div
-              class="dark:animate-glow dark:bg-slate-600 bg-sky-400 rounded-md shadow-md overflow-hidden transition-transform duration-500 transform hover:scale-105"
-            >
-              <img
-                src="./dist/img/portofolio/UILoginMoney.png"
-                alt="Design Home"
-                class="items-center justify-center mx-auto h-auto object-contain"
-              />
-            </div>
-
-            <div
-              class="flex items-center gap-2 mt-5 mb-3"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              <h3 class="text-xl font-semibold text-dark dark:text-primary">
-                Design Money App
-              </h3>
-              <a
-                href="https://www.figma.com/design/XLFzZwZuFqTNAAOGd5NTxz/Money-Application?node-id=105-128&t=9MbriUycEhkwEnPz-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-red-500 hover:text-red-700 animate-bounce"
-              >
-                <!-- isi dari icons8-external-link.svg -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="w-[1.25rem] h-[1.25rem]"
-                >
-                  <path
-                    d="M14 3h7v7h-2V6.41l-9.29 
-               9.3-1.42-1.42L17.59 5H14V3zM5 
-               5h5V3H5c-1.1 0-2 .9-2 
-               2v14c0 1.1.9 2 2 
-               2h14c1.1 0 2-.9 2-2v-5h-2v5H5V5z"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <p
-              class="font-medium text-base text-slate-500 text-justify dark:text-white"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              Pada design ini saya berfokus untuk menciptakan antarmuka halaman
-              login, halaman sign up dan halaman pembelian
-            </p>
-          </div>
-
-          <div
-            class="mb-12 p-4 md:w-1/2"
-            data-aos="flip-right"
             data-aos-duration="1000"
           >
             <div
@@ -1414,9 +1453,16 @@
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <h3 class="text-xl font-semibold text-dark dark:text-primary">
-                Design Money App
-              </h3>
+              <a
+                href="https://www.figma.com/design/XLFzZwZuFqTNAAOGd5NTxz/Money-Application?node-id=105-128&t=9MbriUycEhkwEnPz-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h3
+                  class="text-xl font-semibold text-dark hover:underline dark:text-primary dark:hover:text-blue-300"
+                >
+                  Design Money App
+                </h3></a>
               <a
                 href="https://www.figma.com/design/XLFzZwZuFqTNAAOGd5NTxz/Money-Application?node-id=105-128&t=9MbriUycEhkwEnPz-1"
                 target="_blank"
@@ -1443,16 +1489,33 @@
 
             <p
               class="font-medium text-base text-slate-500 text-justify dark:text-white"
-              data-aos="zoom-in-up"
+              data-aos="fade-right"
               data-aos-duration="1000"
             >
-              Pada design ini saya berfokus untuk menciptakan antarmuka halaman
-              home, halaman pembayaran dan halaman history
+              Money App merupakan aplikasi pengelolaan keuangan digital yang
+              memungkinkan pengguna melakukan berbagai transaksi seperti
+              pembayaran, top up saldo, pembelian pulsa, pembayaran tagihan PLN,
+              serta memantau kondisi keuangan melalui informasi saldo, histori
+              transaksi, dan laporan pemasukan serta pengeluaran. Desain
+              antarmuka dirancang untuk memberikan pengalaman yang sederhana,
+              cepat, dan aman bagi pengguna dalam mengelola kebutuhan finansial
+              sehari-hari<button
+                onclick="openDesignProcess(
+    'Design Process – Money App',
+    'Pengguna mengalami kesulitan dalam mengelola transaksi keuangan harian karena informasi saldo, pengeluaran, dan pemasukan tersebar, serta proses pembayaran dan top up yang kurang praktis. Selain itu, pengguna membutuhkan satu aplikasi terintegrasi untuk membayar kebutuhan rutin seperti PLN, pulsa, dan layanan lainnya dengan cara yang cepat dan aman.',
+    'Saya merancang aplikasi Money App dengan sistem keuangan terpusat yang memungkinkan pengguna melakukan pembayaran, top up, pembelian pulsa, dan pembayaran tagihan seperti PLN dalam satu platform. Antarmuka dirancang sederhana dan terstruktur dengan fitur informasi saldo, histori transaksi, serta visualisasi pemasukan dan pengeluaran agar pengguna dapat memantau kondisi keuangan secara real-time dan mengambil keputusan finansial dengan lebih baik.',
+    'Desain ini menghasilkan pengalaman pengelolaan keuangan yang lebih praktis, transparan, dan efisien. Pengguna dapat menyelesaikan transaksi dengan lebih cepat, memahami kondisi finansialnya secara jelas, serta meningkatkan kepercayaan terhadap aplikasi sebagai solusi keuangan digital yang aman dan mudah digunakan.'
+  )"
+                class="text-dark dark:text-cyan-500 hover:underline font-semibold ml-1"
+              >
+                Lihat Proses Desain
+              </button>
             </p>
           </div>
         </div>
       </div>
     </section>
+    
 
     <!-- Section Project Design UI/UX END -->
 
@@ -1800,7 +1863,25 @@
       <span class="block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
     </a>
     <!-- Back To Top End -->
+    <script>
+      function openDesignProcess(title, problem, solution, result) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalProblem").innerText = problem;
+        document.getElementById("modalSolution").innerText = solution;
+        document.getElementById("modalResult").innerText = result;
 
+        const modal = document.getElementById("designProcessModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeDesignProcess() {
+        const modal = document.getElementById("designProcessModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
