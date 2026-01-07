@@ -1133,53 +1133,45 @@
     </section>
 
     <!-- Section Project Design UI/UX Start -->
-<div
-  id="designProcessModal"
-  class="fixed inset-0 hidden flex items-center justify-center bg-black/60 backdrop-blur-sm z-[9999] px-4"
->
-  <div
-    class="relative w-full max-w-lg rounded-2xl bg-white dark:bg-slate-800 shadow-2xl"
-  >
-
-    <!-- Close -->
-    <button
-      onclick="closeDesignProcess()"
-      class="absolute -top-4 -right-4 z-[10000] h-10 w-10 rounded-full
-             bg-slate-200 text-2xl text-slate-700 shadow-lg
-             hover:bg-red-500 hover:text-white
-             dark:bg-slate-700 dark:text-white flex items-center justify-center"
+ <div
+      id="designProcessModal"
+      class="fixed inset-0 hidden z-[999] items-center justify-center bg-black/50 backdrop-blur-sm px-4"
     >
-      &times;
-    </button>
+      <div
+        class="bg-white dark:bg-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-xl relative max-h-[85vh] overflow-y-auto"
+      >
+        <button
+          onclick="closeDesignProcess()"
+          class="absolute top-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-slate-200/70 dark:bg-slate-700/70 text-slate-700 dark:text-white text-2xl hover:bg-red-500 hover:text-white transition shadow-md"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
 
-    <!-- Content -->
-    <div
-      class="max-h-[80vh] overflow-y-auto p-6 space-y-4 text-sm text-slate-700 dark:text-slate-200"
-    >
-      <h4 id="modalTitle" class="text-lg font-semibold text-primary"></h4>
+        <div
+          class="space-y-4 text-sm text-justify text-slate-600 dark:text-slate-200"
+        >
+          <h4 id="modalTitle" class="text-lg font-semibold text-primary"></h4>
 
-      <div>
-        <span class="font-semibold text-cyan-600">Problem</span>
-        <p id="modalProblem"></p>
-      </div>
+          <div>
+            <span class="font-semibold text-cyan-600">Problem</span>
+            <p id="modalProblem"></p>
+          </div>
 
-      <div>
-        <span class="font-semibold text-cyan-600">Solution</span>
-        <p id="modalSolution"></p>
-      </div>
+          <div>
+            <span class="font-semibold text-cyan-600">Solution</span>
+            <p id="modalSolution"></p>
+          </div>
 
-      <div>
-        <span class="font-semibold text-cyan-600">Result</span>
-        <p id="modalResult"></p>
+          <div>
+            <span class="font-semibold text-cyan-600">Result</span>
+            <p id="modalResult"></p>
+          </div>
+        </div>
       </div>
     </div>
 
-  </div>
-</div>
-   
-
-
-     <section
+    <section
       id="project-design"
       class="pt-36 pb-16 bg-slate-200 dark:bg-slate-800"
     >
