@@ -56,3 +56,34 @@ if (
 } else {
   darkToggle.checked = false; 
 }
+
+
+const modal = document.getElementById("designProcessModal");
+
+document.querySelectorAll(".open-design").forEach((button) => {
+  button.addEventListener("click", () => {
+    openDesignProcess(
+      button.dataset.title,
+      button.dataset.problem,
+      button.dataset.solution,
+      button.dataset.result
+    );
+  });
+});
+
+function openDesignProcess(title, problem, solution, result) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalProblem").innerText = problem;
+  document.getElementById("modalSolution").innerText = solution;
+  document.getElementById("modalResult").innerText = result;
+
+  modal.style.display = "flex";
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDesignProcess() {
+  modal.style.display = "none";
+  modal.classList.add("hidden");
+  document.body.style.overflow = "";
+}
